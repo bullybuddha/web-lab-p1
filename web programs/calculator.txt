@@ -1,0 +1,48 @@
+<html>
+<head>
+  <style type="text/css">
+    .form{
+      color-interpolation: black
+    }
+  </style>
+<title> calculator</title>
+<script type="text/javascript">
+
+function call(click_id)
+{
+var v1=parseFloat(document.getElementById("ip1").value);
+var v2=parseFloat(document.getElementById("ip2").value);
+if(isNaN(v1) || isNaN(v2))
+alert("enter a valid number");
+else if(click_id=="add")
+document.getElementById("output").value=v1+v2;
+else if(click_id=="sub")
+document.getElementById("output").value=v1-v2;
+else if(click_id=="mul")
+document.getElementById("output").value=v1*v2;
+ if(click_id=="div")
+document.getElementById("output").value=v1/v2;
+}
+</script>
+</head>
+<body>
+<center>
+<h1>  <font color="black"> SIMPLE CALCULATOR PROGRAM</h1></font>
+<table style="background-color:black" align=="center">
+<tr>
+<td>
+<form method="get" action="">
+<div width=100% align="center">
+<label><font color="pink"> OP1<input type="text" id="ip1"/></label></font>
+<label> <font color="pink"> op2<input type="text" id="ip2"/></label></font>
+<label><font color="pink"> total<input type="text" id="output"/></label></font>
+<br>
+<label><font color="pink"> ADD<input type="radio" value="+" id="add" onclick="call(this.id)"/></font></label>
+<label>SUB<font color="pink">SUB<input type="radio" value="-" id="sub" onclick="call(this.id)"/></font></label>
+<label>MUL<font color="pink">MUL<input type="radio" value="*" id="mul" onclick="call(this.id)"/></font></label>
+<label>DIV<font color="pink">DIV<input type="radio" value="/" id="div" onclick="call(this.id)"/></font></label>
+<label>RESET<font color="pink">RESET<input type="reset" value="clear"/>
+</div>
+</form>
+</td>
+</tr>
